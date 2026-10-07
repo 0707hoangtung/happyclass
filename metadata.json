@@ -1,0 +1,6 @@
+{
+  "name": "HAPPY CLASS",
+  "description": "Nền tảng quản lý lớp học hạnh phúc thông minh với đồng bộ thời gian thực, quản lý học sinh, bài tập, kiểm tra tự động và phân tích AI sư phạm chuyên sâu.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

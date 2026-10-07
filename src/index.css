@@ -1,0 +1,241 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------
+   HARMONIOUS DARK THEME PALETTE FOR HAPPY CLASS
+   Deep warm tones with subtle wine / burgundy resonance
+   ------------------------------------------------------------- */
+:root {
+  color-scheme: light dark;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #131114 !important;
+  color: #ede9ec !important;
+}
+
+/* 1. Surfaces & Cards in Dark Mode */
+html.dark .bg-white {
+  background-color: #1c181c !important;
+  color: #ede9ec;
+}
+
+html.dark .bg-slate-50 {
+  background-color: #231f24 !important;
+}
+
+html.dark .bg-slate-50\/60,
+html.dark .bg-slate-50\/70,
+html.dark .bg-slate-50\/80 {
+  background-color: rgba(35, 31, 36, 0.75) !important;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #2a252b !important;
+}
+
+html.dark .bg-slate-200 {
+  background-color: #38313a !important;
+}
+
+/* 2. Text colors in Dark Mode */
+html.dark .text-slate-900,
+html.dark .text-slate-800 {
+  color: #f5f2f4 !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-600 {
+  color: #c4bcc2 !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-400 {
+  color: #968e94 !important;
+}
+
+/* 3. Borders in Dark Mode */
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-300 {
+  border-color: #322b31 !important;
+}
+
+html.dark .border-rose-100,
+html.dark .border-rose-100\/80,
+html.dark .border-rose-200 {
+  border-color: #4a1d29 !important;
+}
+
+/* 4. Form inputs, textareas, selects */
+html.dark input:not([type="checkbox"]):not([type="radio"]),
+html.dark textarea,
+html.dark select {
+  background-color: #231f24 !important;
+  border-color: #38313a !important;
+  color: #f5f2f4 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #7d757b !important;
+}
+
+/* 5. Header in Dark Mode */
+html.dark header {
+  background-color: rgba(25, 21, 25, 0.95) !important;
+  border-bottom-color: #3a222a !important;
+}
+
+/* 6. Wine/Rose soft tints */
+html.dark .bg-rose-50,
+html.dark .bg-rose-50\/60,
+html.dark .bg-rose-50\/70,
+html.dark .bg-rose-50\/80 {
+  background-color: #26141a !important;
+}
+
+html.dark .text-rose-900,
+html.dark .text-rose-950 {
+  color: #fca5b7 !important;
+}
+
+html.dark .text-rose-800 {
+  color: #fb7185 !important;
+}
+
+/* 7. Amber tints (Stars / Rewards) */
+html.dark .bg-amber-50,
+html.dark .bg-amber-50\/70 {
+  background-color: #271e11 !important;
+}
+
+html.dark .border-amber-200,
+html.dark .border-amber-200\/80 {
+  border-color: #523e1c !important;
+}
+
+html.dark .text-amber-900,
+html.dark .text-amber-950 {
+  color: #fde68a !important;
+}
+
+html.dark .text-amber-800 {
+  color: #fcd34d !important;
+}
+
+/* 8. Emerald tints (Success / Done) */
+html.dark .bg-emerald-50,
+html.dark .bg-emerald-50\/70,
+html.dark .bg-emerald-50\/80 {
+  background-color: #10261c !important;
+}
+
+html.dark .border-emerald-200,
+html.dark .border-emerald-300 {
+  border-color: #1e4a34 !important;
+}
+
+html.dark .text-emerald-800,
+html.dark .text-emerald-900 {
+  color: #86efac !important;
+}
+
+/* 9. Blue tints */
+html.dark .bg-blue-50 {
+  background-color: #132238 !important;
+}
+
+html.dark .border-blue-200 {
+  border-color: #1e3d64 !important;
+}
+
+html.dark .text-blue-800 {
+  color: #93c5fd !important;
+}
+
+/* 10. KaTeX / Math in dark mode */
+html.dark .katex {
+  color: #f3eff2 !important;
+}
+
+html.dark .katex .mord,
+html.dark .katex .mbin,
+html.dark .katex .mrel,
+html.dark .katex .mopen,
+html.dark .katex .mclose {
+  color: #f3eff2 !important;
+}
+
+/* 11. Modals & Overlays */
+html.dark .backdrop-blur-xs,
+html.dark .backdrop-blur-sm,
+html.dark .backdrop-blur-md {
+  background-color: rgba(10, 8, 10, 0.75);
+}
+
+/* 12. Tables in Dark Mode */
+html.dark table {
+  border-color: #322b31 !important;
+}
+
+html.dark thead {
+  background-color: #241f25 !important;
+}
+
+html.dark thead th {
+  color: #c4bcc2 !important;
+}
+
+html.dark tbody tr {
+  border-bottom-color: #2e262d !important;
+}
+
+html.dark tbody tr:hover {
+  background-color: #29242a !important;
+}
+
+/* 13. Sidebar Border in Dark Mode */
+html.dark aside {
+  border-right-color: #3b0a15 !important;
+}
+
+/* 14. Scrollbars in Dark Mode */
+html.dark ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #141115;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #3c2a33;
+  border-radius: 4px;
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #5a2c3a;
+}
+
+/* 15. Hover states */
+html.dark .hover\:bg-slate-100:hover {
+  background-color: #2b262d !important;
+}
+
+html.dark .hover\:bg-slate-200:hover,
+html.dark .hover\:bg-slate-200\/60:hover {
+  background-color: #352e37 !important;
+}
+
+html.dark .hover\:bg-rose-50:hover {
+  background-color: #2e171f !important;
+}
+
+/* Smooth transitions */
+header, main, aside, div, button, input, textarea, select {
+  transition-property: background-color, border-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

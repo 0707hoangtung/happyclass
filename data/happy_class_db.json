@@ -1,0 +1,19 @@
+{
+  "classes": [],
+  "students": [],
+  "homeworks": [],
+  "homeworkSubmissions": [],
+  "quizzes": [],
+  "quizSubmissions": [],
+  "resources": [],
+  "teacher": {
+    "id": "teacher_tung",
+    "fullName": "Thầy Hoàng Tùng",
+    "email": "07071987hoangtung@gmail.com",
+    "school": "Trường THPT",
+    "subject": "Toán học",
+    "phone": "",
+    "academicYear": "2024 - 2025"
+  },
+  "lastUpdated": "2026-10-05T17:36:00.000Z"
+}
