@@ -18,6 +18,7 @@ import {
   GraduationCap,
   User,
 } from 'lucide-react';
+import crestImg from '../assets/images/happy_class_crest_1791218886710.jpg';
 
 interface SidebarProps {
   isMobileOpen: boolean;
@@ -80,7 +81,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isMobileOpen, onCloseMobile })
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-white/10 ring-1 ring-amber-300/40 p-0.5 shadow-xs flex items-center justify-center shrink-0">
               <img
-                src="/src/assets/images/happy_class_crest_1791218886710.jpg"
+                src={crestImg}
                 alt="Happy class"
                 className="w-full h-full rounded-lg object-cover"
                 referrerPolicy="no-referrer"

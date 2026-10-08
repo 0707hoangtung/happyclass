@@ -221,10 +221,12 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const login = async (email: string, pass: string): Promise<boolean> => {
     try {
-      await api.loginTeacher(email, pass);
+      const cleanEmail = email.trim();
+      const cleanPass = pass.trim();
+      await api.loginTeacher(cleanEmail, cleanPass);
       setIsAuthenticated(true);
       localStorage.setItem('happy_class_auth', 'true');
-      localStorage.setItem('happy_class_email', email);
+      localStorage.setItem('happy_class_email', cleanEmail);
       showToast('Chào mừng Thầy/Cô đã đăng nhập HAPPY CLASS!', 'success');
       return true;
     } catch (err: any) {

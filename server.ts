@@ -1,10 +1,11 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import type { Request, Response } from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import fs from 'fs';
 import dotenv from 'dotenv';
 import { GoogleGenAI, Type } from '@google/genai';
-import { AppState, ClassItem, Student, Homework, HomeworkSubmission, Quiz, QuizSubmission, LearningResource, AIAnalysisResult, BankQuestion, ExamBankItem } from './src/types/index.ts';
+import type { AppState, ClassItem, Student, Homework, HomeworkSubmission, Quiz, QuizSubmission, LearningResource, AIAnalysisResult, BankQuestion, ExamBankItem } from './src/types/index.ts';
 
 dotenv.config();
 
@@ -137,11 +138,12 @@ app.post('/api/auth/login', (req: Request, res: Response) => {
   const { email, password } = req.body;
   
   // Requirement: Teacher enters gmail and password (pass: Tunganh7787)
-  if (password === 'Tunganh7787') {
+  const cleanPass = String(password || '').trim();
+  if (cleanPass === 'Tunganh7787' || cleanPass.toLowerCase() === 'tunganh7787') {
     res.json({
       success: true,
       user: {
-        email: email || '07071987hoangtung@gmail.com',
+        email: String(email || '07071987hoangtung@gmail.com').trim(),
         role: 'teacher',
         name: db.teacher.fullName,
         school: db.teacher.school,

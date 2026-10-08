@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext.tsx';
 import { Lock, Mail, Eye, EyeOff, Sparkles, BookOpen, GraduationCap } from 'lucide-react';
+import crestImg from '../assets/images/happy_class_crest_1791218886710.jpg';
 
 export const LoginModal: React.FC = () => {
   const { login } = useApp();
@@ -17,7 +18,7 @@ export const LoginModal: React.FC = () => {
       setErrorMsg('Vui lòng nhập địa chỉ Gmail giáo viên');
       return;
     }
-    if (!password) {
+    if (!password.trim()) {
       setErrorMsg('Vui lòng nhập mật khẩu tài khoản');
       return;
     }
@@ -26,7 +27,7 @@ export const LoginModal: React.FC = () => {
     setErrorMsg('');
 
     try {
-      const ok = await login(email.trim(), password);
+      const ok = await login(email.trim(), password.trim());
       if (!ok) {
         setErrorMsg('Mật khẩu đăng nhập không chính xác. Vui lòng thử lại.');
       }
@@ -49,7 +50,7 @@ export const LoginModal: React.FC = () => {
           {/* School Emblem / Crest */}
           <div className="relative mx-auto mb-3 w-16 h-16 rounded-full bg-white/10 p-1 ring-2 ring-amber-300/40 shadow-inner flex items-center justify-center">
             <img
-              src="/src/assets/images/happy_class_crest_1791218886710.jpg"
+              src={crestImg}
               alt="HAPPY CLASS Crest"
               className="w-full h-full rounded-full object-cover"
               referrerPolicy="no-referrer"
